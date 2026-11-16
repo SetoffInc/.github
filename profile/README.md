@@ -49,12 +49,3 @@ Setoff builds AI for tax and accounting work. Accounting firms run their tax wor
 ## We're hiring
 
 We hire engineers who want AI to do real work where real money is on the line. Email [hello@setoff.tax](mailto:hello@setoff.tax) with something you've built, or visit [setoff.tax](https://setoff.tax).
-
-## Credits
-
-- **The Great Wave off Kanagawa** by Katsushika Hokusai, about 1830–32. Public domain; scan by The Metropolitan Museum of Art via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Tsunami_by_hokusai_19th_century.jpg).
-- **Buff Doge vs. Cheems.** Swole Doge was first posted by u/purnya232 on r/dogelore in 2019, and the vs. Cheems format followed in 2020 ([meme.com](https://meme.com/memes/swole-doge-vs-cheems), [Know Your Meme](https://knowyourmeme.com/memes/cheems)). Doge is Kabosu, from the photo her owner Atsuko Sato posted in 2010 ([Wikipedia](https://en.wikipedia.org/wiki/Doge_(meme))). Cheems is Balltze. Template from [Imgflip](https://imgflip.com/memegenerator/247375501/Buff-Doge-vs-Cheems).
-- **Expanding Brain.** Also called Galaxy Brain, from early 2017 ([Know Your Meme](https://knowyourmeme.com/memes/galaxy-brain)). Template from [Imgflip](https://imgflip.com/memegenerator/93895088/Expanding-Brain).
-- **Logos** from [Simple Icons](https://simpleicons.org) (CC0) and [Lobe Icons](https://github.com/lobehub/lobe-icons) (MIT, for OpenAI and AWS). Each logo is a trademark of its owner.
-
-The meme formats belong to their creators; Setoff wrote the captions only.

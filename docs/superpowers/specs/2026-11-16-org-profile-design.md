@@ -31,3 +31,7 @@ The owner asked for no Japanese characters. The vertical katakana, kanji heading
 ## Revision 3, 2026-11-16
 
 The owner found the ASCII art and the code-block stack and product boxes poor. Now: Hokusai's Great Wave (public domain, Met scan via Wikimedia Commons) as the header image, uncropped as the owner asked; a row of brand-coloured logo tiles for the stack (Simple Icons CC0, Lobe Icons MIT for OpenAI and AWS); a paragraph plus two bullets for Setoff and Protas. All ASCII art removed.
+
+## Revision 4, 2026-11-16
+
+The owner removed the credits section and the check that required it, after being told credit is optional for the public-domain print and CC0 icons, does not license the memes, and is the usual way to keep Lobe Icons' MIT notice.

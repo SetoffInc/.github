@@ -2,7 +2,7 @@
 """Checks the public profile before it ships.
 
 1. Images in profile/assets stay small enough to load fast.
-2. Every image the README references exists and has alt text, and the README credits its memes.
+2. Every image the README references exists and has alt text.
    The README contains no Japanese or Chinese characters.
 3. Nothing in the public repo names private repos or internal infrastructure.
 
@@ -51,8 +51,6 @@ def check_readme_images(problems):
     for match in re.finditer(r"[\u3000-\u30ff\u4e00-\u9fff\uff00-\uffef]", text):
         line = text.count("\n", 0, match.start()) + 1
         problems.append(f"README:{line}: Japanese character '{match.group(0)}'; keep the page ASCII")
-    if "meme" in text and "Credits" not in text:
-        problems.append("README: memes need a credits section")
     for alt in re.findall(r'<img[^>]*>', text):
         if 'alt="' not in alt or 'alt=""' in alt:
             problems.append(f"README: image without alt text: {alt[:60]}")
