@@ -1,47 +1,66 @@
-<p align="center">
-  <img src="assets/hero.svg" width="100%" alt="A terminal where Protas, the Setoff agent, reconciles a quarter of bank lines against the ledger, asks a human to approve 35 proposals, posts a journal, and ends with debits equal to credits and a difference of 0.00.">
-</p>
+```
+                   ____                               .-'''-.             セ
+                __/\/\/\__                          .'       '.           ッ
+              _/          \_                       /           \          ト
+            _/   '   ,   '  \_                     |           |          オ
+          _/                  \_                   \           /          フ
+       __/                      \__                 '.       .'
+    __/                            \__                '-...-'
+  ~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^
 
-We build AI agents that do real tax work for accounting firms: they read bank lines, match them to the ledger, prepare returns and post journals. Money and client data are on the line, so the engineering is strict. Debits equal credits, agents follow the same rules as people, and the database enforces both.
+         _____    ______  ______   ____     ______    ______
+        / ___/   / ____/ /_  __/  / __ \   / ____/   / ____/
+        \__ \   / __/     / /    / / / /  / /_      / /_
+       ___/ /  / /___    / /    / /_/ /  / __/     / __/
+      /____/  /_____/   /_/     \____/  /_/       /_/
 
-## The stack
-
-```yaml
-# stack.yaml: what you would touch in your first month
-api:      Go, chi, golang-migrate, SQL you can read
-workers:  Go, Asynq on Redis
-agents:   Go agent loop, Python + FastAPI for model work
-models:   Anthropic, OpenAI, Gemini, chosen per task
-web:      React 19, TypeScript, Vite
-mobile:   Expo + React Native   # Protas in your pocket
-data:     PostgreSQL with row-level security, Redis
-cloud:    AWS, S3 + CloudFront, Docker
+      AI for tax and accounting work                              税務 × 人工知能
 ```
 
-## How we build
+## 会社 &nbsp;the company
 
-```go
-// The rule every Setoff agent follows before it touches a tool.
-func (a *Agent) Call(ctx context.Context, tool Tool, args Args) (Result, error) {
-	who := CallerFrom(ctx)           // the person who asked, never a system user
-	if !who.Can(tool.Requires) {
-		return Denied(tool.Requires) // say which permission is missing; never guess
-	}
-	return tool.Run(ctx, args)       // the same gate the human path uses
-}
+Setoff builds AI for tax and accounting work. Accounting firms run their tax workflow on Setoff: client books, reconciliations, returns and the paperwork in between. Protas, our AI assistant, takes the repetitive work and checks with a person before anything is final.
+
+```
++-- Setoff ----------------------------+   +-- Protas ----------------------------+
+| the tax workflow platform            |   | the AI assistant inside Setoff,      |
+| for accounting firms                 |   | on the web and on your phone         |
++--------------------------------------+   +--------------------------------------+
 ```
 
-- **An agent never has more access than the person who asked it.** A prompt injection can only request what that person could already do.
-- **Postgres keeps tenants apart.** Row-level security means a forgotten `WHERE` clause returns nothing it shouldn't.
-- **Long agent runs take a snapshot of permissions when they start** and stop for approval one step at a time.
-- **Guards fail the build** so code review is for design, not for catching the same mistake twice.
+## 技術 &nbsp;the stack
 
-## Meanwhile, in the office
+```
+setoff
+|-- 脳  ai         Anthropic, OpenAI, Gemini, Python, FastAPI
+|-- 骨  backend    Go, Asynq workers on Redis
+|-- 顔  web        React 19, TypeScript, Vite
+|-- 携  mobile     Expo, React Native
+|-- 蔵  data       PostgreSQL with row-level security, Redis
+`-- 雲  cloud      AWS, S3, CloudFront, Docker
+```
+
+## 遊 &nbsp;the break room
 
 <p align="center">
-  <img src="assets/meme.svg" width="100%" alt="Meme in two panels. Left: a buff Setoff engineer flexing, with Go on one bicep and SQL on the other, who ships the RLS policy with the migration, gives agents your permissions instead of root, and runs go test before coffee. Right: a small worried figure from the spreadsheet era holding a printout showing #REF!, who VLOOKUPs across 14 tabs, emails final_FINAL_v3.xlsx to themselves, and uses the macro as access control.">
+  <img src="assets/meme-buff-doge.jpg" width="640" alt="Buff Doge vs. Cheems meme. Left, a muscular Doge labelled 'Accountants with Setoff': an AI agent preps the return, you review and sign off. Right, a crying Cheems labelled 'Accountants with 14 spreadsheet tabs': #REF! at 2am in tax season.">
 </p>
 
-## Work with us
+<p align="center">
+  <img src="assets/meme-expanding-brain.jpg" width="420" alt="Expanding Brain meme in four steps: doing taxes with a calculator, doing taxes in a spreadsheet, tax software with 40 menus, and, with the glowing brain, an AI agent that does the tax work and asks before it acts.">
+</p>
 
-We hire engineers who like Go, Postgres and problems where a rounding error is a bug report from an accountant. Tell us what you've built at [setoff.tax](https://setoff.tax).
+## 募集 &nbsp;we're hiring
+
+We hire engineers who want AI to do real work where real money is on the line. Say hello at [setoff.tax](https://setoff.tax).
+
+## 謝辞 &nbsp;credits
+
+The meme formats belong to their creators. Setoff wrote the captions only.
+
+- **Buff Doge vs. Cheems.** Swole Doge was first posted by u/purnya232 on r/dogelore in 2019, and the vs. Cheems format followed in 2020 ([meme.com](https://meme.com/memes/swole-doge-vs-cheems), [Know Your Meme](https://knowyourmeme.com/memes/cheems)). Doge is Kabosu, from the photo her owner Atsuko Sato posted in 2010 ([Wikipedia](https://en.wikipedia.org/wiki/Doge_(meme))). Cheems is Balltze. Template from [Imgflip](https://imgflip.com/memegenerator/247375501/Buff-Doge-vs-Cheems).
+- **Expanding Brain.** Also called Galaxy Brain, from early 2017 ([Know Your Meme](https://knowyourmeme.com/memes/galaxy-brain)). Template from [Imgflip](https://imgflip.com/memegenerator/93895088/Expanding-Brain).
+
+```
+   ~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~   またね
+```

@@ -4,17 +4,15 @@ This repo holds the public profile shown at [github.com/SetoffInc](https://githu
 
 ## Editing
 
-- **Copy:** edit `profile/README.md`.
-- **Terminal hero and meme:** edit the text near the top of `scripts/build.py`, then regenerate:
+- **Copy and ASCII art:** edit `profile/README.md`. Keep each kanji at the start or end of a line inside code blocks; CJK glyphs are wider than ASCII and shift anything after them.
+- **Memes:** captioned images live in `profile/assets/`. Any new meme needs an entry under credits.
+- **Before you push:**
 
   ```bash
-  python3 scripts/build.py && python3 scripts/check.py
+  python3 scripts/check.py
   ```
-
-  Commit the regenerated files in `profile/assets/`. CI fails if they drift from the script.
 
 ## Rules
 
 - **This repo is public. Every other Setoff repo stays private.** Don't link to private repos, internal hostnames, file paths or env files. `scripts/check.py` blocks the common cases, and review covers the rest.
-- **Keep images in this repo.** No third-party widgets or hot-linked images.
-- **Keep the stack list current.** It is what candidates read.
+- **Keep images in this repo** and credit every meme format and template source.

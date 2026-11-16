@@ -1,20 +1,18 @@
 #!/usr/bin/env python3
 """Checks the public profile before it ships.
 
-1. Every SVG in profile/assets parses as XML and has a <title> for screen readers.
-2. Every image the README references exists.
+1. Images in profile/assets stay small enough to load fast.
+2. Every image the README references exists and has alt text, and the README credits its memes.
 3. Nothing in the public repo names private repos or internal infrastructure.
 
 Exits non-zero with one line per problem.
 """
 import re
 import sys
-import xml.etree.ElementTree as ET
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 PROFILE = ROOT / "profile"
-SVG_NS = "{http://www.w3.org/2000/svg}"
 
 # Strings that must never appear in this public repo. Patterns are split so the
 # check does not match itself.
@@ -29,20 +27,13 @@ SCANNED = {".md", ".svg", ".py", ".yml", ".yaml"}
 SKIP_DIRS = {".git", "docs"}
 
 
-def check_svgs(problems):
-    svgs = sorted((PROFILE / "assets").glob("*.svg"))
-    if not svgs:
-        problems.append("no SVGs found in profile/assets")
-    for svg in svgs:
-        try:
-            root = ET.parse(svg).getroot()
-        except ET.ParseError as err:
-            problems.append(f"{svg.name}: invalid XML ({err})")
-            continue
-        if root.find(f"{SVG_NS}title") is None:
-            problems.append(f"{svg.name}: missing <title>")
-        if svg.stat().st_size > 200_000:
-            problems.append(f"{svg.name}: {svg.stat().st_size} bytes, keep it under 200 KB")
+def check_assets(problems):
+    images = sorted(p for p in (PROFILE / "assets").glob("*") if p.suffix in {".png", ".jpg", ".gif", ".svg"})
+    if not images:
+        problems.append("no images found in profile/assets")
+    for img in images:
+        if img.stat().st_size > 400_000:
+            problems.append(f"{img.name}: {img.stat().st_size} bytes, keep it under 400 KB")
 
 
 def check_readme_images(problems):
@@ -56,6 +47,8 @@ def check_readme_images(problems):
             problems.append(f"README: external image {src}; keep assets in this repo")
         elif not (PROFILE / src).exists():
             problems.append(f"README: image {src} does not exist")
+    if "meme" in text and "credits" not in text:
+        problems.append("README: memes need a credits section")
     for alt in re.findall(r'<img[^>]*>', text):
         if 'alt="' not in alt or 'alt=""' in alt:
             problems.append(f"README: image without alt text: {alt[:60]}")
@@ -76,7 +69,7 @@ def check_leaks(problems):
 
 def main():
     problems = []
-    check_svgs(problems)
+    check_assets(problems)
     check_readme_images(problems)
     check_leaks(problems)
     for p in problems:

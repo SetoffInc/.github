@@ -14,3 +14,12 @@
 **Decisions.** A ledger concept: navy ruled paper, debit red, credit green, amber totals with an accountant's double rule. The hero is an animated agent run that ends balanced, and it respects reduced motion. The meme is drawn from scratch to avoid copyright and hot-linking. `scripts/check.py` guards against private references; CI checks the SVGs match the generator.
 
 **Left to the builder.** Hiring contact (currently setoff.tax), org description and website in org settings.
+
+## Revision, 2026-11-16
+
+Feedback on the first version: the generated SVG hero and the drawn meme looked poor, and the page described engineering internals instead of the company.
+
+- **Aesthetic:** ASCII art and Japanese motifs in GitHub code blocks: Mt. Fuji and a rising sun, block-letter wordmark, セットオフ set vertically, and a kanji title on each section.
+- **Content:** the company at large (what Setoff and Protas are), the stack, hiring and credits. The agent-permission internals are gone.
+- **Memes:** real Buff Doge vs. Cheems and Expanding Brain templates from Imgflip, captioned for Setoff, with format origins credited. Neither template is free-licensed; the owner accepted that.
+- **Removed:** `scripts/build.py` and the generated SVGs. `scripts/check.py` now checks image size, alt text and meme credits as well as private references.
