@@ -1,0 +1,18 @@
+name: check
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  profile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: SVGs match the generator
+        run: |
+          python3 scripts/build.py
+          git diff --exit-code profile/assets
+      - name: No private references, valid SVGs, images resolve
+        run: python3 scripts/check.py

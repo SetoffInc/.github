@@ -1,0 +1,16 @@
+# Org profile design (short)
+
+**Intent.** Make github.com/SetoffInc attractive to engineers we want to hire: show the stack and how we build, with a nerdy AI-company feel. Private repos stay private and are never described.
+
+**Goals.** Stack and engineering principles, an animated terminal hero, an original swole-vs-small meme, a hiring call to action.
+**Non-goals.** Product marketing for accounting firms, live stats.
+**Anti-goals.** Leaking anything about private repos or internal infrastructure; looking like a generic widget-built profile.
+
+**Approaches considered.**
+- A. README + generated SVGs kept in this repo (chosen): unique look, no external dependencies, easy edits via one script.
+- B. Third-party widgets (typing SVGs, skill icons, badges): fastest, generic, depends on other servers.
+- C. A + scheduled Action regenerating live stats: needs a token and risks leaking private-repo data.
+
+**Decisions.** A ledger concept: navy ruled paper, debit red, credit green, amber totals with an accountant's double rule. The hero is an animated agent run that ends balanced, and it respects reduced motion. The meme is drawn from scratch to avoid copyright and hot-linking. `scripts/check.py` guards against private references; CI checks the SVGs match the generator.
+
+**Left to the builder.** Hiring contact (currently setoff.tax), org description and website in org settings.
