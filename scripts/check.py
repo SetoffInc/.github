@@ -25,7 +25,7 @@ FORBIDDEN = [
     r"\.env\b",
 ]
 SCANNED = {".md", ".svg", ".py", ".yml", ".yaml"}
-SKIP_DIRS = {".git", "docs"}
+SKIP_DIRS = {".git"}
 
 
 def check_assets(problems):
