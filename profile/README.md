@@ -1,9 +1,9 @@
 ```
-                   ____                               .-'''-.             セ
-                __/\/\/\__                          .'       '.           ッ
-              _/          \_                       /           \          ト
-            _/   '   ,   '  \_                     |           |          オ
-          _/                  \_                   \           /          フ
+                   ____                               .-'''-.
+                __/\/\/\__                          .'       '.
+              _/          \_                       /           \
+            _/   '   ,   '  \_                     |           |
+          _/                  \_                   \           /
        __/                      \__                 '.       .'
     __/                            \__                '-...-'
   ~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^
@@ -14,10 +14,10 @@
        ___/ /  / /___    / /    / /_/ /  / __/     / __/
       /____/  /_____/   /_/     \____/  /_/       /_/
 
-      AI for tax and accounting work                              税務 × 人工知能
+      AI for tax and accounting work
 ```
 
-## 会社 &nbsp;the company
+## The company
 
 Setoff builds AI for tax and accounting work. Accounting firms run their tax workflow on Setoff: client books, reconciliations, returns and the paperwork in between. Protas, our AI assistant, takes the repetitive work and checks with a person before anything is final.
 
@@ -28,19 +28,19 @@ Setoff builds AI for tax and accounting work. Accounting firms run their tax wor
 +--------------------------------------+   +--------------------------------------+
 ```
 
-## 技術 &nbsp;the stack
+## The stack
 
 ```
 setoff
-|-- 脳  ai         Anthropic, OpenAI, Gemini, Python, FastAPI
-|-- 骨  backend    Go, Asynq workers on Redis
-|-- 顔  web        React 19, TypeScript, Vite
-|-- 携  mobile     Expo, React Native
-|-- 蔵  data       PostgreSQL with row-level security, Redis
-`-- 雲  cloud      AWS, S3, CloudFront, Docker
+|-- ai         Anthropic, OpenAI, Gemini, Python, FastAPI
+|-- backend    Go, Asynq workers on Redis
+|-- web        React 19, TypeScript, Vite
+|-- mobile     Expo, React Native
+|-- data       PostgreSQL with row-level security, Redis
+`-- cloud      AWS, S3, CloudFront, Docker
 ```
 
-## 遊 &nbsp;the break room
+## The break room
 
 <p align="center">
   <img src="assets/meme-buff-doge.jpg" width="640" alt="Buff Doge vs. Cheems meme. Left, a muscular Doge labelled 'Accountants with Setoff': an AI agent preps the return, you review and sign off. Right, a crying Cheems labelled 'Accountants with 14 spreadsheet tabs': #REF! at 2am in tax season.">
@@ -50,11 +50,11 @@ setoff
   <img src="assets/meme-expanding-brain.jpg" width="420" alt="Expanding Brain meme in four steps: doing taxes with a calculator, doing taxes in a spreadsheet, tax software with 40 menus, and, with the glowing brain, an AI agent that does the tax work and asks before it acts.">
 </p>
 
-## 募集 &nbsp;we're hiring
+## We're hiring
 
 We hire engineers who want AI to do real work where real money is on the line. Say hello at [setoff.tax](https://setoff.tax).
 
-## 謝辞 &nbsp;credits
+## Credits
 
 The meme formats belong to their creators. Setoff wrote the captions only.
 
@@ -62,5 +62,5 @@ The meme formats belong to their creators. Setoff wrote the captions only.
 - **Expanding Brain.** Also called Galaxy Brain, from early 2017 ([Know Your Meme](https://knowyourmeme.com/memes/galaxy-brain)). Template from [Imgflip](https://imgflip.com/memegenerator/93895088/Expanding-Brain).
 
 ```
-   ~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~   またね
+   ~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~
 ```

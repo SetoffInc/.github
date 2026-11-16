@@ -23,3 +23,7 @@ Feedback on the first version: the generated SVG hero and the drawn meme looked 
 - **Content:** the company at large (what Setoff and Protas are), the stack, hiring and credits. The agent-permission internals are gone.
 - **Memes:** real Buff Doge vs. Cheems and Expanding Brain templates from Imgflip, captioned for Setoff, with format origins credited. Neither template is free-licensed; the owner accepted that.
 - **Removed:** `scripts/build.py` and the generated SVGs. `scripts/check.py` now checks image size, alt text and meme credits as well as private references.
+
+## Revision 2, 2026-11-16
+
+The owner asked for no Japanese characters. The vertical katakana, kanji headings and tagline are gone; the ASCII Fuji, sun and waves stay. `scripts/check.py` fails on any Japanese character in the README.
