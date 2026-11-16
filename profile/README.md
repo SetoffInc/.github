@@ -48,7 +48,7 @@ Setoff builds AI for tax and accounting work. Accounting firms run their tax wor
 
 ## We're hiring
 
-We hire engineers who want AI to do real work where real money is on the line. Say hello at [setoff.tax](https://setoff.tax).
+We hire engineers who want AI to do real work where real money is on the line. Email [hello@setoff.tax](mailto:hello@setoff.tax) with something you've built, or visit [setoff.tax](https://setoff.tax).
 
 ## Credits
 
