@@ -27,3 +27,7 @@ Feedback on the first version: the generated SVG hero and the drawn meme looked 
 ## Revision 2, 2026-11-16
 
 The owner asked for no Japanese characters. The vertical katakana, kanji headings and tagline are gone; the ASCII Fuji, sun and waves stay. `scripts/check.py` fails on any Japanese character in the README.
+
+## Revision 3, 2026-11-16
+
+The owner found the ASCII art and the code-block stack and product boxes poor. Now: Hokusai's Great Wave (public domain, Met scan via Wikimedia Commons) as the header image, uncropped as the owner asked; a row of brand-coloured logo tiles for the stack (Simple Icons CC0, Lobe Icons MIT for OpenAI and AWS); a paragraph plus two bullets for Setoff and Protas. All ASCII art removed.

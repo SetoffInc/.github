@@ -29,7 +29,7 @@ SKIP_DIRS = {".git", "docs"}
 
 
 def check_assets(problems):
-    images = sorted(p for p in (PROFILE / "assets").glob("*") if p.suffix in {".png", ".jpg", ".gif", ".svg"})
+    images = sorted(p for p in (PROFILE / "assets").rglob("*") if p.suffix in {".png", ".jpg", ".gif", ".svg"})
     if not images:
         problems.append("no images found in profile/assets")
     for img in images:
