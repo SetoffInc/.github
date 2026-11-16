@@ -2,7 +2,12 @@
   <img src="assets/great-wave.jpg" width="100%" alt="The Great Wave off Kanagawa, a woodblock print by Katsushika Hokusai: a huge blue wave curls over three boats, with Mount Fuji small in the distance.">
 </p>
 
-<h1 align="center">Setoff</h1>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/brand/setoff-logo-white.svg">
+    <img src="assets/brand/setoff-logo-navy.svg" width="300" alt="Setoff">
+  </picture>
+</p>
 <p align="center">AI for tax and accounting work</p>
 
 ## The company
